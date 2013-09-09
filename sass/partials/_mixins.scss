@@ -1,0 +1,19 @@
+@mixin bs($bs-type: $defined-bs-type) {
+	-webkit-box-sizing: $bs-type;
+	-moz-box-sizing: $bs-type;
+	box-sizing: $bs-type;
+}
+
+@mixin boxsizing-borderbox {
+-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+@mixin liteUPhover{
+&:hover {
+background-color:$flexcolor2;
+box-shadow: 2px 8px 6px rgba(31, 42, 54,0.2),
+            0px -5px 35px rgba(88,119,154,0.3);
+}
+}
