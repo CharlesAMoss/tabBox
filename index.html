@@ -16,16 +16,16 @@
     
     </head>
     
-    <body> 
+    <body ng-controller="ProfileController as profile" > 
 
-        
-        
+    <div  ng-repeat="product in profile.products"> 
+
         <div id="tabbed_box_1" class="tabbed_box">
         <h4>browse site <em>select a tab</em></h4>
         <div class="tabbed_area"> 
 
 
-        <section ng-controller="TabController as tab">
+        <section ng-controller="TabController as tab" >
            
             <ul class="tabs">
               <li ng-class="{ active: tab.isSelected(1) }"> 
@@ -36,9 +36,15 @@
             <a href ng-click="tab.selectTab(3)">tres</a> </li>
             </ul>
              
-        <div class="content" ng-show="tab.isSelected(1)">
-           <h2>uno</h2>
-           <blockquote> :L
+        <div class="content" ng-show="tab.isSelected(1)" n>
+           <div style="width: 230px;padding:0 20px 0 10px;border-right: 2px dotted #990000; margin-right: 10px; "> 
+           <img ng-src="{{product.images}}" />
+           <h2>{{product.name}}</h2>
+           <h3>{{product.alias}}</h3>
+           </div>
+           <blockquote > 
+           <p></p>
+
            </blockquote>
         </div>
 
@@ -55,7 +61,8 @@
         </div>
 
         </section>
-
+        
+        </div>
         </div>
         </div>
 
